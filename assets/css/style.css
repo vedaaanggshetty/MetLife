@@ -1144,3 +1144,32 @@ body.nav-active { overflow: hidden; }
   .contact-item { margin-block-start: 0; }
 
 }
+
+/* 
+CURSOR
+
+*/
+/* Hide default cursor */
+/* Hide the default cursor */
+body {
+  cursor: none;
+}
+
+/* Main cursor and trail styles */
+.cursor, .trail {
+  position: fixed;
+  width: 12px; /* Smaller cursor size */
+  height: 12px; /* Smaller cursor size */
+  background-color: rgba(173, 216, 230, 0.8); /* Light blue color */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  z-index: 1000;
+}
+
+/* Style for trail elements */
+.trail {
+  opacity: 0.6; /* Slightly transparent */
+  transition: transform 0.15s ease; /* Slower transition for trailing effect */
+}
