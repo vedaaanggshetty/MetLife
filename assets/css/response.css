@@ -1,0 +1,184 @@
+/* General Styles */
+body, html {
+    scroll-behavior: smooth;
+  }
+  
+  header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-light {
+    background-color: #fff !important;
+  }
+  
+  .btn-base-color {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-base-color:hover {
+    background-color: #0056b3;
+  }
+  
+  .header-icon a {
+    color: #007bff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 1rem 0;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #333 !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #007bff !important;
+  }
+  
+  /* Hero Section */
+  .page-title-big-typography {
+    color: #333;
+    padding: 4rem 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .page-title-extra-large h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+  
+  .page-title-extra-large h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  
+  /* Doctor Profile Cards */
+  .team-style-06 .rounded-circle {
+    border: 3px solid #007bff;
+  }
+  
+  .team-style-06 {
+    transition: transform 0.3s;
+  }
+  
+  .team-style-06:hover {
+    transform: translateY(-5px);
+  }
+  
+  .team-style-06 p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .team-style-06 .fs-18 {
+    font-weight: 700;
+    color: #333;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+  }
+  
+  .footer-navbar .nav-link {
+    color: #999;
+  }
+  
+  .footer-navbar .nav-link:hover {
+    color: #fff;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+  }
+  
+  .footer-top p {
+    margin-bottom: 0;
+  }
+  
+  /* Custom Social Media Icon Style */
+  .elements-social a {
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .elements-social a:hover {
+    color: #0056b3;
+  }
+  
+  /* Accordion Custom Style */
+  .accordion-header a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .accordion-header a:hover {
+    color: #007bff;
+  }
+  
+  .accordion-header .accordion-title {
+    font-weight: 600;
+  }
+  
+  .accordion-body p {
+    font-size: 0.875rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .navbar-brand img {
+      width: 120px;
+    }
+    
+    .team-style-06 .rounded-circle {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .page-title-extra-large h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-title-extra-large h1 {
+      font-size: 1.75rem;
+    }
+    
+    .team-style-06 .fs-18 {
+      font-size: 1.1rem;
+    }
+  
+    .footer-navbar {
+      flex-direction: column;
+    }
+  
+    .elements-social ul {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .btn-small {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+    
+    .navbar-toggler {
+      font-size: 1.25rem;
+    }
+  }
+  

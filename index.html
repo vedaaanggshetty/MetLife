@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- IonIcons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -30,58 +31,299 @@
         <div class="circle"></div>
     </div>
 
-    <!-- Header and Navbar -->
+    <!-- HEADER -->
     <header class="header" data-header>
         <div class="container">
             <a href="#" class="logo">
-                <!-- <img src="./assets/images/logo.svg" width="136" height="46" alt="MetLife Logo"> -->
+                <!-- Replace with actual MetLife logo with heartbeat symbol image path -->
+                <h1 class="logo-text">MetLife <span class="heartbeat-icon">❤️</span></h1>
             </a>
 
             <nav class="navbar" data-navbar>
                 <div class="navbar-top">
-                    <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                    <a href="#" class="logo">
+                        <!-- Replace with actual MetLife logo with heartbeat symbol image path -->
+                        <h1 class="logo-text">MetLife <span class="heartbeat-icon">❤️</span></h1>
                     </a>
-
-                    <button class="nav-close-btn" aria-label="close-menu" data-nav-toggler>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
                         <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
                     </button>
                 </div>
 
                 <ul class="navbar-list">
                     <li class="navbar-item"><a href="#" class="navbar-link title-md">Home</a></li>
+                    <li class="navbar-item"><a href="demo-medical-doctors.html" class="navbar-link title-md">Doctors</a></li>
                     <li class="navbar-item"><a href="#" class="navbar-link title-md">Services</a></li>
                     <li class="navbar-item"><a href="#" class="navbar-link title-md">Blog</a></li>
                     <li class="navbar-item"><a href="#" class="navbar-link title-md">Contact</a></li>
                 </ul>
 
                 <ul class="social-list">
-                    <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-facebook">Facebook</ion-icon>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-twitter">Twitter</ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
                 </ul>
             </nav>
 
-            <button class="nav-open-btn" aria-label="open menu" data-mav-toggler>
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
                 <ion-icon name="menu-outline"></ion-icon>
             </button>
-
             <a href="#" class="btn has-before title-md">Make Appointment</a>
-                <div class="overlay" data-nav-toggler data-overlay></div>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
         </div>
     </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <article>
+
+            <!-- HERO SECTION -->
+            <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="home">
+                <div class="container">
+                    <div class="hero-content">
+                        <p class="hero-subtitle has-before" data-reveal="left">Welcome To MetLife</p>
+                        <h1 class="headline-lg hero-title" data-reveal="left">
+                            Quality Healthcare Services
+                        </h1>
+                    </div>
+
+                    <figure class="hero-banner" data-reveal="right">
+                        <img src="./assets/images/hero-banner.png" width="590" height="517" loading="eager" alt="hero banner" class="w-100">
+                    </figure>
+                </div>
+            </section>
+
+            <!-- SERVICE SECTION -->
+            <section class="service" aria-label="service">
+                <div class="container">
+                    <ul class="service-list">
+                        <li>
+                            <div class="service-card" data-reveal="bottom">
+                                <div class="card-icon">
+                                    <img src="./assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
+                                </div>
+                                <h3 class="headline-sm card-title"><a href="#">Psychiatry</a></h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                                <button class="btn-circle" aria-label="read more about psychiatry">
+                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                </button>
+                            </div>
+                        </li>
+                        <!-- Additional service cards omitted for brevity -->
+                        <li>
+                            <div class="service-card" data-reveal="bottom">
+              
+                              <div class="card-icon">
+                                <img src="./assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
+                              </div>
+              
+                              <h3 class="headline-sm card-title">
+                                <a href="#">Gynecology</a>
+                              </h3>
+              
+                              <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                              </p>
+              
+                              <button class="btn-circle" aria-label="read more about Gynecology">
+                                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                              </button>
+              
+                            </div>
+                          </li>
+              
+                          <li>
+                            <div class="service-card" data-reveal="bottom">
+              
+                              <div class="card-icon">
+                                <img src="./assets/images/icon-3.png" width="71" height="71" loading="lazy" alt="icon">
+                              </div>
+              
+                              <h3 class="headline-sm card-title">
+                                <a href="#">Pulmonology</a>
+                              </h3>
+              
+                              <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                              </p>
+              
+                              <button class="btn-circle" aria-label="read more about Pulmonology">
+                                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                              </button>
+              
+                            </div>
+                          </li>
+              
+                          <li>
+                            <div class="service-card" data-reveal="bottom">
+              
+                              <div class="card-icon">
+                                <img src="./assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
+                              </div>
+              
+                              <h3 class="headline-sm card-title">
+                                <a href="#">Orthopedics</a>
+                              </h3>
+              
+                              <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                              </p>
+              
+                              <button class="btn-circle" aria-label="read more about Orthopedics">
+                                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                              </button>
+              
+                            </div>
+                          </li>
+              
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section class="section about" aria-labelledby="about-label">
+                <div class="container">
+                    <div class="about-content">
+                        <p class="section-subtitle title-lg has-after" id="about-label" data-reveal="left">About Us</p>
+                        <h2 class="headline-md" data-reveal="left">Experienced Workers</h2>
+                        <p class="section-text" data-reveal="left">Aliquam faucibus, odio nec commodo aliquam, neque felis placerat dui, a porta ante lectus dapibus est.</p>
+                        <ul class="tab-list" data-reveal="left">
+                            <li><button class="tab-btn active">Vision</button></li>
+                            <li><button class="tab-btn">Mission</button></li>
+                            <li><button class="tab-btn">Strategy</button></li>
+                        </ul>
+                        <p class="tab-text" data-reveal="left">Aliquam faucibus, odio nec commodo aliquam, neque felis placerat dui, a porta ante lectus dapibus est.</p>
+                    </div>
+                    <figure class="about-banner" data-reveal="right">
+                        <img src="./assets/images/demo-medical-hero-banner-01.png" width="554" height="678" loading="lazy" alt="about banner" class="w-100">
+                    </figure>
+                </div>
+            </section>
+
+            <!-- BLOG SECTION -->
+            <section class="section blog" aria-labelledby="blog-label">
+                <div class="container">
+                    <p class="section-subtitle title-lg text-center" id="blog-label" data-reveal="bottom">News & Article</p>
+                    <h2 class="section-title headline-md text-center" data-reveal="bottom">Latest Articles</h2>
+                    <ul class="grid-list">
+                        <li>
+                            <div class="blog-card has-before has-after" data-reveal="bottom">
+                                <div class="meta-wrapper">
+                                    <div class="card-meta"><ion-icon name="person-outline"></ion-icon><span class="span">By vedaaang</span></div>
+                                    <div class="card-meta"><ion-icon name="folder-outline"></ion-icon><span class="span">Specialist</span></div>
+                                </div>
+                                <h3 class="headline-sm card-title">Could intermittent fasting reduce breast cancer</h3>
+                                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                <a href="#" class="btn-text title-lg">Read More</a>
+                            </div>
+                        </li>
+                        <!-- Additional blog cards omitted for brevity -->
+                    </ul>
+                </div>
+            </section
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+        <div class="container">
+            <div class="section footer-top">
+                <div class="footer-brand" data-reveal="bottom">
+                    <a href="#" class="logo">
+                        <!-- Placeholder for MetLife logo with heartbeat symbol -->
+                        <h1 class="logo-text">MetLife <span class="heartbeat-icon">❤️</span></h1>
+                    </a>
+                    <ul class="contact-list has-after">
+                        <li class="contact-item">
+                            <div class="item-icon">
+                                <ion-icon name="mail-open-outline"></ion-icon>
+                            </div>
+                            <div>
+                                <p>Main Email: <a href="mailto:vedangshetty21@gmail.com" class="contact-link">vedangshetty21@&shy;gmail.com</a></p>
+                                <p>Inquiries: <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a></p>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="item-icon">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </div>
+                            <div>
+                                <p>Office Telephone: <a href="tel:0029129102320" class="contact-link">0029129102320</a></p>
+                                <p>Mobile: <a href="tel:000232439493" class="contact-link">000 2324 39493</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-list" data-reveal="bottom">
+                    <p class="headline-sm footer-list-title">About Us</p>
+                    <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</p>
+                    <address class="address">
+                        <ion-icon name="map-outline"></ion-icon>
+                        <span class="text">
+                           Nitte, Udupi <br>
+                           KA | IN
+                        </span>
+                    </address>
+                </div>
+
+                <ul class="footer-list" data-reveal="bottom">
+                    <li><p class="headline-sm footer-list-title">Services</p></li>
+                    <li><a href="#" class="text footer-link">Conditions</a></li>
+                    <li><a href="#" class="text footer-link">Listing</a></li>
+                    <li><a href="#" class="text footer-link">How It Works</a></li>
+                    <li><a href="#" class="text footer-link">What We Offer</a></li>
+                    <li><a href="#" class="text footer-link">Latest News</a></li>
+                    <li><a href="#" class="text footer-link">Contact Us</a></li>
+                </ul>
+
+                <ul class="footer-list" data-reveal="bottom">
+                    <li><p class="headline-sm footer-list-title">Useful Links</p></li>
+                    <li><a href="#" class="text footer-link">Conditions</a></li>
+                    <li><a href="#" class="text footer-link">Terms of Use</a></li>
+                    <li><a href="#" class="text footer-link">Our Services</a></li>
+                    <li><a href="#" class="text footer-link">Join as a Doctor</a></li>
+                    <li><a href="#" class="text footer-link">New Guests List</a></li>
+                    <li><a href="#" class="text footer-link">The Team List</a></li>
+                </ul>
+
+                <div class="footer-list" data-reveal="bottom">
+                    <p class="headline-sm footer-list-title">Subscribe</p>
+                    <form action="" class="footer-form">
+                        <input type="email" name="email" placeholder="Email" class="input-field title-lg">
+                        <button type="submit" class="btn has-before title-md">Subscribe</button>
+                    </form>
+                    <p class="text">Get the latest updates via email. You may unsubscribe anytime.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="text copyright">&copy; MetLife 2024 | All Rights Reserved by vedangshetty</p>
+                <ul class="social-list">
+                    <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-google"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up"></ion-icon>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
