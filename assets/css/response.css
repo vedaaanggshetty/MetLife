@@ -120,26 +120,25 @@ body {
   #DOCTOR PROFILE SECTION
 \*-----------------------------------*/
 .btn-appointment {
-  background-color: var(--verdigris);
-  color: var(--white);    
-  width: 50px;
-  font-weight: 700; /* Ensure consistency with other font weights */
-  padding: 0px 10px; /* Reduced padding to make the button narrower */
-  border: none;
-  border-radius: var(--radius-6);
-  cursor: pointer;
+  background-color: var(--verdigris); /* Background color */
+  color: var(--white); /* Text color */
+  font-weight: 700; /* Font weight */
+  padding: 0px 0px; /* Reduced padding for smaller button */
+  border: none; /* Remove border */
+  border-radius: var(--radius-6); /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
   font-size: 1.4rem; /* Maintain font size */
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
   margin-top: 10px; /* Space above the button */
-  display: inline-block; /* Make it behave as a block element */
-  width: auto; /* Automatically adjust width */
-  min-width: 100px; /* Set a minimum width if needed */
+  text-align: center; /* Center text */
+  display: inline-flex; /* Make button a block element for centering */
+  width: 50px; /* Fixed width for the button */
+  max-width: 50%; /* Prevent exceeding container */
 }
 
 .btn-appointment:hover {
   background-color: var(--midnight-green); /* Change color on hover */
 }
-
 
 .section-title {
   font-size: 3rem;
@@ -163,6 +162,40 @@ body {
   text-align: center;
   padding: 20px;
   position: relative;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align children */
+}
+
+.btn-appointment {
+  background-color: var(--verdigris);
+  color: var(--white);
+  font-weight: 700;
+  padding: 10px 15px; /* Reduced padding for smaller width */
+  border: none;
+  border-radius: var(--radius-6);
+  cursor: pointer;
+  font-size: 1.2rem; /* Maintain font size */
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Space above the button */
+  width: 80%; /* Set a specific width */
+}
+
+.btn-appointment:hover {
+  background-color: var(--midnight-green); /* Change color on hover */
+}
+
+.doctor-name {
+  font-size: 2rem; /* Increase font size for doctor's name */
+  font-weight: 700;
+  margin: 10px 0 5px;
+  color: var(--midnight-green);
+}
+
+.doctor-specialty {
+  font-size: 1.4rem; /* Increase font size for specialty */
+  color: var(--independece);
+  margin-bottom: 10px;
 }
 
 .doctor-image {
@@ -188,14 +221,14 @@ body {
 }
 
 .doctor-name {
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   font-weight: 700;
   margin: 10px 0 5px;
   color: var(--midnight-green);
 }
 
 .doctor-specialty {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--independece);
   margin-bottom: 10px;
 }

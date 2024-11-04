@@ -979,7 +979,21 @@
     /**
     * HERO
     */
-
+    @keyframes bounce {
+      0%, 100% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-15px); /* Move up by 10 pixels */
+      }
+  }
+  
+  .hero-banner {
+      animation: bounce 2s infinite; /* Animation name, duration, and infinite loop */
+  }
+  
+  /* Other existing styles... */
+  
     .hero-banner {
       display: block;
       max-width: max-content;
