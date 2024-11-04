@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MetLife Contact Page">
+  
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+
+  <!-- IonIcons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <title>MetLife Contact Us</title>
+
+  <style>
+    /* Additional styles for the card-like form */
+    .contact-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+    
+    .contact-card h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .contact-card p {
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #009688;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #00796b;
+    }
+    @keyframes scrollAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+ 
+  </style>
+</head>
+<body class="loaded">
+
+  <!-- Preloader -->
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        <h1 class="logo-text">MetLife <span class="heartbeat-icon">❤️</span></h1>
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <h1 class="logo-text">MetLife <span class="heartbeat-icon">❤️</span></h1>
+          </a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link title-md">Home</a></li>
+          <li class="navbar-item"><a href="doctors.html" class="navbar-link title-md">Doctors</a></li>
+          <li class="navbar-item"><a href="blog.html" class="navbar-link title-md">Blog</a></li>
+        </ul>
+
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section section">
+      <!-- Use the correct path to your SVG file -->
+    </div>
+    <div class="contact-card">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-text">We'd love to hear from you. Fill out the form below and we'll get back to you shortly.</p>
+      <form action="#" class="contact-form">
+        <div class="form-group">
+          <label for="name" class="form-label title-md">Full Name</label>
+          <input type="text" id="name" name="name" class="input-field" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label title-md">Email</label>
+          <input type="email" id="email" name="email" class="input-field" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label title-md">Message</label>
+          <textarea id="message" name="message" class="input-field" placeholder="Write your message here" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn has-before title-md">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+
+  <!-- FOOTER -->
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <div class="container">
+      <!-- Footer content from index.html -->
+      <div class="section footer-top">
+        <div class="footer-brand" data-reveal="bottom">
+          <a href="#" class="logo">
+            <h1 class="logo-text">MetLife <span class="heartbeat-icon">❤️</span></h1>
+          </a>
+          <ul class="contact-list has-after">
+            <li class="contact-item">
+              <div class="item-icon"><ion-icon name="mail-open-outline"></ion-icon></div>
+              <div>
+                <p>Main Email: <a href="mailto:vedangshetty21@gmail.com" class="contact-link">vedangshetty21@&shy;gmail.com</a></p>
+                <p>Inquiries: <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a></p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="item-icon"><ion-icon name="call-outline"></ion-icon></div>
+              <div>
+                <p>Office Telephone: <a href="tel:0029129102320" class="contact-link">0029129102320</a></p>
+                <p>Mobile: <a href="tel:000232439493" class="contact-link">000 2324 39493</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Additional footer links and content from index.html -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-top-btn">↑</button>
+</body>
+</html>
