@@ -1,184 +1,243 @@
-/* General Styles */
-body, html {
-    scroll-behavior: smooth;
-  }
-  
-  header {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header-light {
-    background-color: #fff !important;
-  }
-  
-  .btn-base-color {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-base-color:hover {
-    background-color: #0056b3;
-  }
-  
-  .header-icon a {
-    color: #007bff;
-  }
-  
-  /* Navbar */
-  .navbar {
-    padding: 1rem 0;
-  }
-  
-  .navbar-toggler {
-    border: none;
-  }
-  
-  .navbar-nav .nav-link {
-    color: #333 !important;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #007bff !important;
-  }
-  
-  /* Hero Section */
-  .page-title-big-typography {
-    color: #333;
-    padding: 4rem 1rem;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .page-title-extra-large h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    font-weight: bold;
-  }
-  
-  .page-title-extra-large h2 {
-    font-size: 1.75rem;
-    font-weight: 500;
-  }
-  
-  /* Doctor Profile Cards */
-  .team-style-06 .rounded-circle {
-    border: 3px solid #007bff;
-  }
-  
-  .team-style-06 {
-    transition: transform 0.3s;
-  }
-  
-  .team-style-06:hover {
-    transform: translateY(-5px);
-  }
-  
-  .team-style-06 p {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  .team-style-06 .fs-18 {
-    font-weight: 700;
-    color: #333;
-  }
-  
-  /* Footer Styling */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0;
-  }
-  
-  .footer-navbar .nav-link {
-    color: #999;
-  }
-  
-  .footer-navbar .nav-link:hover {
-    color: #fff;
-  }
-  
-  .footer-logo img {
-    width: 150px;
-  }
-  
-  .footer-top p {
-    margin-bottom: 0;
-  }
-  
-  /* Custom Social Media Icon Style */
-  .elements-social a {
-    color: #007bff;
-    transition: color 0.3s;
-  }
-  
-  .elements-social a:hover {
-    color: #0056b3;
-  }
-  
-  /* Accordion Custom Style */
-  .accordion-header a {
-    display: flex;
-    align-items: center;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .accordion-header a:hover {
-    color: #007bff;
-  }
-  
-  .accordion-header .accordion-title {
-    font-weight: 600;
-  }
-  
-  .accordion-body p {
-    font-size: 0.875rem;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 992px) {
-    .navbar-brand img {
-      width: 120px;
-    }
-    
-    .team-style-06 .rounded-circle {
-      width: 100px;
-      height: 100px;
-    }
-    
-    .page-title-extra-large h1 {
-      font-size: 2rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .page-title-extra-large h1 {
-      font-size: 1.75rem;
-    }
-    
-    .team-style-06 .fs-18 {
-      font-size: 1.1rem;
-    }
-  
-    .footer-navbar {
-      flex-direction: column;
-    }
-  
-    .elements-social ul {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .btn-small {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.9rem;
-    }
-    
-    .navbar-toggler {
-      font-size: 1.25rem;
-    }
-  }
-  
+/*-----------------------------------*\
+    #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+  * colors
+  */
+  --rich-black-fogra-29: hsl(222, 44%, 8%);
+  --midnight-green: hsl(186, 100%, 19%);
+  --independece: hsl(236, 14%, 39%);
+  --verdigris: hsl(182, 100%, 35%);
+  --white: hsl(0, 0%, 100%);
+  --gray-web: hsl(0, 0%, 50%);
+  --shadow-1: 0px 2px 20px hsla(209, 36%, 72%, 0.2);
+  --radius-6: 6px;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a,
+img,
+span,
+time,
+input,
+button,
+ion-icon { display: block; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { height: auto; }
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+button { cursor: pointer; }
+
+html {
+  font-size: 10px;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  font-size: 1.6rem;
+  color: var(--independece);
+  line-height: 1.8;
+}
+
+/*-----------------------------------*\
+  #NAVBAR
+\*-----------------------------------*/
+
+.header {
+  background-color: var(--rich-black-fogra-29);
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 20px; /* Space between navbar items */
+}
+
+.navbar-item {
+  padding: 10px 15px; /* Padding around the items for better spacing */
+}
+
+.navbar-link {
+  color: var(--white); /* Text color for links */
+  text-transform: uppercase; /* Uppercase for stylistic consistency */
+  font-weight: 500; /* Consistent font weight */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-link:hover {
+  color: var(--verdigris); /* Change color on hover */
+}
+
+/* Social icons */
+.social-list {
+  display: flex;
+  gap: 10px; /* Space between social icons */
+}
+
+.social-list a {
+  color: var(--white); /* Color for social icons */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-list a:hover {
+  color: var(--verdigris); /* Change color on hover */
+}
+
+/*-----------------------------------*\
+  #DOCTOR PROFILE SECTION
+\*-----------------------------------*/
+.btn-appointment {
+  background-color: var(--verdigris);
+  color: var(--white);    
+  width: 50px;
+  font-weight: 700; /* Ensure consistency with other font weights */
+  padding: 0px 10px; /* Reduced padding to make the button narrower */
+  border: none;
+  border-radius: var(--radius-6);
+  cursor: pointer;
+  font-size: 1.4rem; /* Maintain font size */
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Space above the button */
+  display: inline-block; /* Make it behave as a block element */
+  width: auto; /* Automatically adjust width */
+  min-width: 100px; /* Set a minimum width if needed */
+}
+
+.btn-appointment:hover {
+  background-color: var(--midnight-green); /* Change color on hover */
+}
+
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--midnight-green);
+}
+
+.grid-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr); /* Updated to fit 4 cards per row */
+  justify-content: center;
+}
+
+.doctor-card {
+  background-color: var(--white);
+  border-radius: var(--radius-6);
+  box-shadow: var(--shadow-1);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.doctor-image {
+  margin-bottom: 15px;
+}
+
+.doctor-image img {
+  width: 90px; /* Image size */
+  height: 90px;
+  border-radius: 50%;
+}
+
+.rating-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: yellow;
+  color: var(--rich-black-fogra-29);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  border-radius: var(--radius-6);
+}
+
+.doctor-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 10px 0 5px;
+  color: var(--midnight-green);
+}
+
+.doctor-specialty {
+  font-size: 1.2rem;
+  color: var(--independece);
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: var(--verdigris);
+  font-weight: 700;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+}
+
+.social-list a {
+  font-size: 1.5rem; /* Icon size */
+  color: var(--independece);
+  transition: color 0.3s;
+}
+
+.social-list a:hover {
+  color: var(--verdigris);
+}
+
+/* Trust Section */
+.trust-section {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: var(--independece);
+}
+
+.trust-badge {
+  background-color: var(--verdigris);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-6);
+  display: inline-block;
+  margin-right: 10px;
+}

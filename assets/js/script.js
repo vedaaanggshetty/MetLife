@@ -97,22 +97,27 @@ window.addEventListener("load", revealElementOnScroll);
 
 // Create a custom cursor element
 // Create the main cursor element
+// Create main cursor element
 const cursor = document.createElement('div');
 cursor.classList.add('cursor');
 document.body.appendChild(cursor);
 
-// Create trailing elements
+// Create trail elements
 const trails = [];
-for (let i = 0; i < 5; i++) { // Adjust number of trails if needed
+const trailCount = 8; // Adjust the number of trails if needed
+
+for (let i = 0; i < trailCount; i++) {
     const trail = document.createElement('div');
     trail.classList.add('trail');
     document.body.appendChild(trail);
     trails.push(trail);
 }
 
-// Function to follow the mouse cursor
+// Mouse position tracker
 let mouseX = 0;
 let mouseY = 0;
+
+// Update mouse position
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
@@ -120,23 +125,18 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = `${mouseY}px`;
 });
 
-// Animate trailing effect with a delay
-let lastX = mouseX;
-let lastY = mouseY;
+// Trail effect
+const trailPositions = Array(trailCount).fill({ x: mouseX, y: mouseY });
+
 function animateTrails() {
-    let prevX = mouseX;
-    let prevY = mouseY;
+    // Update each trail's position with a slight delay
+    trailPositions.unshift({ x: mouseX, y: mouseY });
+    trailPositions.pop();
 
     trails.forEach((trail, index) => {
-        // Each trail follows the previous position with a delay
-        const delay = (index + 1) * 0.05; // Adjust delay for more/less trail spacing
-        trail.style.left = `${lastX}px`;
-        trail.style.top = `${lastY}px`;
-
-        lastX += (prevX - lastX) * delay;
-        lastY += (prevY - lastY) * delay;
-        prevX = lastX;
-        prevY = lastY;
+        const { x, y } = trailPositions[index];
+        trail.style.left = `${x}px`;
+        trail.style.top = `${y}px`;
     });
 
     requestAnimationFrame(animateTrails);
