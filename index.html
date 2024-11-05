@@ -23,6 +23,9 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <!-- Favicon??? -->
+     <link rel="icon" href="favicon.svg" type="image/x-icon">
+
     <title>MetLife HCMS</title>
 </head>
 <body>
@@ -53,8 +56,8 @@
                 <ul class="navbar-list">
                     <li class="navbar-item"><a href="#" class="navbar-link title-md">Home</a></li>
                     <li class="navbar-item"><a href="doctors.html" class="navbar-link title-md">Doctors</a></li>
-                    <li class="navbar-item"><a href="#" class="navbar-link title-md">Services</a></li>
-                    <li class="navbar-item"><a href="#" class="navbar-link title-md">Contact</a></li>
+                    <li class="navbar-item"><a href="#services" class="navbar-link title-md">Services</a></li>
+                    <li class="navbar-item"><a href="contact.html" class="navbar-link title-md">Contact</a></li>
                 </ul>
 
                 <ul class="social-list">
@@ -98,7 +101,7 @@
             <!-- SERVICE SECTION -->
             <section class="service" aria-label="service">
                 <div class="container">
-                    <ul class="service-list">
+                    <ul id="services" class="service-list">
                         <li>
                             <div class="service-card" data-reveal="bottom">
                                 <div class="card-icon">
@@ -228,7 +231,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <footer id= "footers" class="footer" style="background-image: url('./assets/images/footer-bg.png')">
         <div class="container">
             <div class="section footer-top">
                 <div class="footer-brand" data-reveal="bottom">

@@ -1,24 +1,14 @@
-/*-----------------------------------*\
-    #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
-  /**
-  * colors
-  */
   --rich-black-fogra-29: hsl(222, 44%, 8%);
   --midnight-green: hsl(186, 100%, 19%);
   --independece: hsl(236, 14%, 39%);
   --verdigris: hsl(182, 100%, 35%);
+  --light-verdigris: hsl(182, 100%, 50%);
   --white: hsl(0, 0%, 100%);
   --gray-web: hsl(0, 0%, 50%);
   --shadow-1: 0px 2px 20px hsla(209, 36%, 72%, 0.2);
   --radius-6: 6px;
 }
-
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 
 *,
 *::before,
@@ -66,10 +56,6 @@ body {
   line-height: 1.8;
 }
 
-/*-----------------------------------*\
-  #NAVBAR
-\*-----------------------------------*/
-
 .header {
   background-color: var(--rich-black-fogra-29);
   padding: 20px;
@@ -83,61 +69,36 @@ body {
 
 .navbar-list {
   display: flex;
-  gap: 20px; /* Space between navbar items */
+  gap: 20px;
 }
 
 .navbar-item {
-  padding: 10px 15px; /* Padding around the items for better spacing */
+  padding: 10px 15px;
 }
 
 .navbar-link {
-  color: var(--white); /* Text color for links */
-  text-transform: uppercase; /* Uppercase for stylistic consistency */
-  font-weight: 500; /* Consistent font weight */
-  transition: color 0.3s; /* Smooth transition for hover effect */
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .navbar-link:hover {
-  color: var(--verdigris); /* Change color on hover */
+  color: var(--verdigris);
 }
 
-/* Social icons */
 .social-list {
   display: flex;
-  gap: 10px; /* Space between social icons */
+  gap: 10px;
 }
 
 .social-list a {
-  color: var(--white); /* Color for social icons */
-  transition: color 0.3s; /* Transition for hover effect */
+  color: var(--white);
+  transition: color 0.3s;
 }
 
 .social-list a:hover {
-  color: var(--verdigris); /* Change color on hover */
-}
-
-/*-----------------------------------*\
-  #DOCTOR PROFILE SECTION
-\*-----------------------------------*/
-.btn-appointment {
-  background-color: var(--verdigris); /* Background color */
-  color: var(--white); /* Text color */
-  font-weight: 700; /* Font weight */
-  padding: 0px 0px; /* Reduced padding for smaller button */
-  border: none; /* Remove border */
-  border-radius: var(--radius-6); /* Rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  font-size: 1.4rem; /* Maintain font size */
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-  margin-top: 10px; /* Space above the button */
-  text-align: center; /* Center text */
-  display: inline-flex; /* Make button a block element for centering */
-  width: 50px; /* Fixed width for the button */
-  max-width: 50%; /* Prevent exceeding container */
-}
-
-.btn-appointment:hover {
-  background-color: var(--midnight-green); /* Change color on hover */
+  color: var(--verdigris);
 }
 
 .section-title {
@@ -151,7 +112,7 @@ body {
 .grid-list {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(4, 1fr); /* Updated to fit 4 cards per row */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
 }
 
@@ -162,66 +123,55 @@ body {
   text-align: center;
   padding: 20px;
   position: relative;
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center align children */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.doctor-card:nth-child(1) { animation-delay: 0.1s; }
+.doctor-card:nth-child(2) { animation-delay: 0.3s; }
+.doctor-card:nth-child(3) { animation-delay: 0.5s; }
+.doctor-card:nth-child(4) { animation-delay: 0.6s; }
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--midnight-green);
 }
 
 .btn-appointment {
   background-color: var(--verdigris);
   color: var(--white);
   font-weight: 700;
-  padding: 10px 15px; /* Reduced padding for smaller width */
+  padding: 10px 15px;
   border: none;
   border-radius: var(--radius-6);
   cursor: pointer;
-  font-size: 1.2rem; /* Maintain font size */
+  font-size: 1.4rem;
   transition: background-color 0.3s ease;
-  margin-top: 10px; /* Space above the button */
-  width: 80%; /* Set a specific width */
+  margin-top: 10px;
+  width: 100%;
 }
 
 .btn-appointment:hover {
-  background-color: var(--midnight-green); /* Change color on hover */
+  background-color: var(--light-verdigris);
 }
 
 .doctor-name {
-  font-size: 2rem; /* Increase font size for doctor's name */
-  font-weight: 700;
-  margin: 10px 0 5px;
-  color: var(--midnight-green);
-}
-
-.doctor-specialty {
-  font-size: 1.4rem; /* Increase font size for specialty */
-  color: var(--independece);
-  margin-bottom: 10px;
-}
-
-.doctor-image {
-  margin-bottom: 15px;
-}
-
-.doctor-image img {
-  width: 90px; /* Image size */
-  height: 90px;
-  border-radius: 50%;
-}
-
-.rating-badge {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color: yellow;
-  color: var(--rich-black-fogra-29);
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 4px 8px;
-  border-radius: var(--radius-6);
-}
-
-.doctor-name {
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 10px 0 5px;
   color: var(--midnight-green);
@@ -238,6 +188,28 @@ body {
   font-weight: 700;
 }
 
+.doctor-image {
+  margin-bottom: 15px;
+}
+
+.doctor-image img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.rating-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: yellow;
+  color: var(--rich-black-fogra-29);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  border-radius: var(--radius-6);
+}
+
 .social-list {
   display: flex;
   justify-content: center;
@@ -247,7 +219,7 @@ body {
 }
 
 .social-list a {
-  font-size: 1.5rem; /* Icon size */
+  font-size: 1.5rem;
   color: var(--independece);
   transition: color 0.3s;
 }
@@ -256,7 +228,6 @@ body {
   color: var(--verdigris);
 }
 
-/* Trust Section */
 .trust-section {
   text-align: center;
   margin-top: 20px;
